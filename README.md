@@ -1,4 +1,8 @@
 # Geek_Tree
+## 注意事項
+srcフォルダ, Assets.xcassets, Info.plist, README.md以外は共有しない. \
+Assets.xcassets, Info.plistはiosフォルダ内に設置する. \
+npmインストールはREADMEで管理しているもの以外実行しない.
 
 ## 初回インストール
 sudo npm install ionic -g \

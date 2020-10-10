@@ -18,9 +18,11 @@ import { NativeStorage } from '@ionic-native/native-storage/ngx';
 // Browserへの遷移
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
+import { MypopComponent} from "./popovers/mypop/mypop.component";
+
 @NgModule({
-  declarations: [AppComponent],
-  entryComponents: [],
+  declarations: [AppComponent, MypopComponent],
+  entryComponents: [MypopComponent],
   imports: [
     BrowserModule,
     IonicModule.forRoot(),

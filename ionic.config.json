@@ -1,7 +1,5 @@
 {
   "name": "Geek Tree",
-  "integrations": {
-    "capacitor": {}
-  },
+  "integrations": {},
   "type": "angular"
 }
