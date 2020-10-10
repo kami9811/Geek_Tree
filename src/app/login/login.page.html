@@ -10,19 +10,19 @@
   <!-- Logo -->
   <ion-img src="../../assets/logo.png" alt="app-logo"></ion-img>
   <!-- GitHub-ID, Application Password, Save Button -->
-  <form>
+  <form (submit)="insertNative()">
     <ion-item class="login-input" lines="none">
       <ion-label position="stacked">GitHub ID</ion-label>
-      <ion-input type="text" name="id"></ion-input>
+      <ion-input type="text" name="id" [(ngModel)]="id"></ion-input>
     </ion-item>
     <ion-item class="login-input ion-margin-top" lines="none">
       <ion-label position="stacked">Application Password</ion-label>
-      <ion-input type="password" name="password"></ion-input>
+      <ion-input type="password" name="password" [(ngModel)]="password"></ion-input>
     </ion-item>
     <ion-button class="save-id ion-margin-vertical" type="submit" color="blue">Save</ion-button>
   </form>
   <!-- Sign in with GitHub-->
-  <form>
+  <form *ngIf="gitFlag" (click)="getOauth()">
     <ion-button color="dark" class="github-btn ion-margin-vertical">
       <ion-img src="https://github.githubassets.com/favicons/favicon-dark.png"></ion-img>
       <span class="ion-text-capitalize">Sign in with GitHub</span>

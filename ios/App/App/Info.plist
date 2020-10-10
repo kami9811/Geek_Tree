@@ -5,7 +5,11 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
+<<<<<<< HEAD
         <string>Geek Tree</string>
+=======
+	<string>Geek Tree</string>
+>>>>>>> 7ecd335ab557429cdbca53e4ec3241d44671b223
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -21,11 +25,13 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>com.getcapacitor.capacitor</string>
+			<string>com.wasamon.geektree</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>capacitor</string>
+				<string>geektree</string>
 			</array>
 		</dict>
 	</array>

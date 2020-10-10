@@ -15,6 +15,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AlertController } from '@ionic/angular';
 // NativeStorage
 import { NativeStorage } from '@ionic-native/native-storage/ngx';
+// Browserへの遷移
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 import { MypopComponent} from "./popovers/mypop/mypop.component";
 
@@ -33,6 +35,7 @@ import { MypopComponent} from "./popovers/mypop/mypop.component";
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     AlertController,
     NativeStorage,
+    InAppBrowser,
   ],
   bootstrap: [AppComponent]
 })
