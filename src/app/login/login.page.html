@@ -1,26 +1,31 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="main">
     <ion-buttons slot="start">
       <ion-back-button id="back"></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-img src="../../assets/icon.png" alt="app-logo"></ion-img>
-  <div id="app-title">Geek Tree</div>
+<ion-content class="login-page ion-text-center">
+  <!-- Logo -->
+  <ion-img src="../../assets/logo.png" alt="app-logo"></ion-img>
+  <!-- GitHub-ID, Application Password, Save Button -->
   <form>
-    <ion-label>Your GitHub ID</ion-label>
-    <ion-input type="text" name="id" placeholder="enter github id"></ion-input>
-    <ion-label>Application Password</ion-label>
-    <ion-input type="password" name="password" placeholder="enter github password"></ion-input>
-    <ion-button>Save</ion-button>
+    <ion-item class="login-input" lines="none">
+      <ion-label position="stacked">GitHub ID</ion-label>
+      <ion-input type="text" name="id"></ion-input>
+    </ion-item>
+    <ion-item class="login-input ion-margin-top" lines="none">
+      <ion-label position="stacked">Application Password</ion-label>
+      <ion-input type="password" name="password"></ion-input>
+    </ion-item>
+    <ion-button class="save-id ion-margin-vertical" type="submit" color="blue">Save</ion-button>
   </form>
+  <!-- Sign in with GitHub-->
   <form>
-    <ion-button color="dark">
+    <ion-button color="dark" class="github-btn ion-margin-vertical">
       <ion-img src="https://github.githubassets.com/favicons/favicon-dark.png"></ion-img>
       <span class="ion-text-capitalize">Sign in with GitHub</span>
     </ion-button>
   </form>
-  
 </ion-content>
