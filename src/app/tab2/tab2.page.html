@@ -18,7 +18,54 @@
   </ion-toolbar>
 </ion-header>
 
+<!-- body -->
 <ion-content [fullscreen]="true">
   <!-- 遷移テスト -->
   <ion-button color="green" routerLink="/settings">プロフィール編集ページへ</ion-button>
+  <ion-list>
+    <ion-list-header>
+      My Friends
+    </ion-list-header>
+
+    <!-- フレンドのリスト -->
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="./avatar-finn.png">
+      </ion-avatar>
+      <ion-label>
+        <h2>Yuki Yamamoto</h2>
+        <h3>Ibaraki</h3>
+        <div class="languages">
+          <p>Rails</p>
+          <p>Python</p>
+        </div>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="./avatar-finn.png">
+      </ion-avatar>
+      <ion-label>
+        <h2>Shun Kimura</h2>
+        <h3>Chiba</h3>
+        <div class="languages">
+          <p>Python</p>
+          <p>Jupyter Notebook</p>
+        </div>
+      </ion-label>
+    </ion-item>
+        <ion-item>
+      <ion-avatar slot="start">
+        <img src="./avatar-finn.png">
+      </ion-avatar>
+      <ion-label>
+        <h2>Kami9811</h2>
+        <h3>Kumamoto</h3>
+        <div class="languages">
+          <p>PHP</p>
+          <p>Angular</p>
+        </div>
+      </ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>
