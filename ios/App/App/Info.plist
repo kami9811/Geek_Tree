@@ -5,11 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-<<<<<<< HEAD
         <string>Geek Tree</string>
-=======
-	<string>Geek Tree</string>
->>>>>>> 5da2bf7152ebf2efbb979a4f5da37dd1b919f060
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>

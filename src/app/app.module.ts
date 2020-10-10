@@ -16,9 +16,11 @@ import { AlertController } from '@ionic/angular';
 // NativeStorage
 import { NativeStorage } from '@ionic-native/native-storage/ngx';
 
+import { MypopComponent} from "./popovers/mypop/mypop.component";
+
 @NgModule({
-  declarations: [AppComponent],
-  entryComponents: [],
+  declarations: [AppComponent, MypopComponent],
+  entryComponents: [MypopComponent],
   imports: [
     BrowserModule,
     IonicModule.forRoot(),

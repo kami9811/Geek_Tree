@@ -7,12 +7,14 @@
         <ion-col size="6" class="ion-text-center">
           <ion-img src="../../assets/white_text_logo.png" class="header-icon" alt="logo"></ion-img>
         </ion-col>
-        <ion-col size="3">
-          <ion-button color="light_gray" class="my-page" routerLink="/tabs/tab3">
-            My Page
-            <ion-icon name="caret-down-outline"></ion-icon>
-          </ion-button>
-        </ion-col>
+        <ion-col size="3" (click)="CreatePopover()">
+            <ion-chip class="ion-margin-start" color="light_gray">
+              <ion-avatar>
+                <img src="https://avatars0.githubusercontent.com/u/60207521?v=4" alt="avatar-icon">
+              </ion-avatar>
+              <ion-icon name="caret-down-outline"></ion-icon>
+            </ion-chip>
+         </ion-col>
       </ion-row>
     </ion-grid>
   </ion-toolbar>
