@@ -1,8 +1,20 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
+  <!-- header -->
+  <ion-toolbar color="main">
+    <ion-grid>
+      <ion-row class="ion-justify-content-center ion-align-items-end ion-text-center">
+        <ion-col size="3"></ion-col>
+        <ion-col size="6" class="ion-text-center">
+          <ion-img src="../../assets/logo.png" class="header-icon" alt="logo"></ion-img>
+        </ion-col>
+        <ion-col size="3">
+          <ion-button color="light_gray" class="my-page" routerLink="/tabs/tab3">
+            My Page
+            <ion-icon name="caret-down-outline"></ion-icon>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </ion-toolbar>
 </ion-header>
 
