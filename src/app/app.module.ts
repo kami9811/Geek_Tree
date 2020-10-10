@@ -15,6 +15,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AlertController } from '@ionic/angular';
 // NativeStorage
 import { NativeStorage } from '@ionic-native/native-storage/ngx';
+// Browserへの遷移
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -31,6 +33,7 @@ import { NativeStorage } from '@ionic-native/native-storage/ngx';
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     AlertController,
     NativeStorage,
+    InAppBrowser,
   ],
   bootstrap: [AppComponent]
 })

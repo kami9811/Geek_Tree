@@ -8,7 +8,9 @@ pod repo update \
 ionic integrations enable capacitor
 ## npmインストール
 npm install cordova-plugin-nativestorage \
-npm install @ionic-native/native-storage
+npm install @ionic-native/native-storage \
+npm install cordova-plugin-inappbrowser \
+npm install @ionic-native/in-app-browser
 ## アプリのビルド
 ### 初回（iOS）
 ionic build --prod \

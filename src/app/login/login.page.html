@@ -22,7 +22,7 @@
     <ion-button class="save-id ion-margin-vertical" type="submit" color="blue">Save</ion-button>
   </form>
   <!-- Sign in with GitHub-->
-  <form>
+  <form *ngIf="gitFlag" (click)="getOauth()">
     <ion-button color="dark" class="github-btn ion-margin-vertical">
       <ion-img src="https://github.githubassets.com/favicons/favicon-dark.png"></ion-img>
       <span class="ion-text-capitalize">Sign in with GitHub</span>

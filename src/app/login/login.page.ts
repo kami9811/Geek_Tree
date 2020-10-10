@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NativeStorage } from '@ionic-native/native-storage/ngx';
 import { GlobalService } from '../global.service';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 @Component({
   selector: 'app-login',
@@ -14,9 +15,12 @@ export class LoginPage implements OnInit {
   postObj: any = {};
   returnObj: any = {};
 
+  gitFlag: Boolean = false;
+
   constructor(
     private nativeStorage: NativeStorage,
     public gs: GlobalService,
+    private iab: InAppBrowser,
   ) { }
 
   ngOnInit() {
@@ -40,12 +44,20 @@ export class LoginPage implements OnInit {
               console.log(res);
               if(res['status'] == 200){
                 console.log('status is 200');
+                this.gitFlag = true;
+                // const browser = this.iab.create('https://github.com/login/oauth/authorize?client_id=db79d4b963293b84a753&scope=user%20public_repo', '_system');
+                // browser.show();
               }
             }
           )
         }
       }
     )
+  }
+
+  getOauth = () => {
+    const browser = this.iab.create('https://github.com/login/oauth/authorize?client_id=db79d4b963293b84a753&scope=user%20public_repo', '_system');
+    browser.show();
   }
 
 }
