@@ -1,0 +1,27 @@
+.login-page {
+  ion-img {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .login-input {
+    ion-input {
+      border: 1px solid lightgray;
+      border-radius: 5px;
+      text-indent: 0.5em;
+    }
+  }
+  .save-id {
+    font-size: 0.9em;
+  }
+  .github-btn {
+    font-size: 0.9em;
+    ion-img {
+      width: 20px;
+      height: 20px;
+      margin: 0 10px 0 1em;
+    }
+    span {
+      padding-right: 1em;
+    }
+  }
+}

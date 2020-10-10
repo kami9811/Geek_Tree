@@ -1,17 +1,46 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+  <!-- header -->
+  <ion-toolbar color="main">
+    <ion-grid>
+      <ion-row class="ion-justify-content-center ion-align-items-end">
+        <ion-col size="3"></ion-col>
+        <ion-col size="6" class="ion-text-center">
+          <ion-img src="../../assets/white_text_logo.png" class="header-icon" alt="logo"></ion-img>
+        </ion-col>
+        <ion-col size="3" (click)="CreatePopover()">
+          <ion-chip class="ion-margin-start" color="light_gray">
+            <ion-avatar>
+              <img src="https://avatars0.githubusercontent.com/u/60207521?v=4" alt="avatar-icon">
+            </ion-avatar>
+            <ion-icon name="caret-down-outline"></ion-icon>
+          </ion-chip>
+       </ion-col>
+      </ion-row>
+    </ion-grid>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <!-- カラーテスト -->
+  <div>
+    <ion-button color="main">main</ion-button>
+    <ion-button color="green">green</ion-button>
+    <ion-button color="blue">blue</ion-button>
+    <ion-button color="light_gray">light_gray</ion-button>
+    <ion-button color="dark_gray">dark_gray</ion-button>
+  </div>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <!-- 遷移テスト -->
+  <ion-button color="green" routerLink="/login">ログインページへ</ion-button>
+
+  <!-- techに応じたレベル表示 -->
+  <ion-item color="dark_gray" >
+    <ion-label class="level_display">
+      <p>Python ... Lv10</p>
+      <p>JavaScript ... Lv20</p>
+    </ion-label>
+  </ion-item>
+
+  <!-- 木の表示 -->
+  <ion-img src="../../assets/tree.svg" alt="木の画像"></ion-img>
 </ion-content>

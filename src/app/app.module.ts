@@ -9,14 +9,33 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+// HTTPリクエスト
+import { HttpClientModule } from '@angular/common/http';
+// Alert
+import { AlertController } from '@ionic/angular';
+// NativeStorage
+import { NativeStorage } from '@ionic-native/native-storage/ngx';
+// Browserへの遷移
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
+
+import { MypopComponent} from "./popovers/mypop/mypop.component";
+
 @NgModule({
-  declarations: [AppComponent],
-  entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  declarations: [AppComponent, MypopComponent],
+  entryComponents: [MypopComponent],
+  imports: [
+    BrowserModule,
+    IonicModule.forRoot(),
+    AppRoutingModule,
+    HttpClientModule,
+  ],
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    AlertController,
+    NativeStorage,
+    InAppBrowser,
   ],
   bootstrap: [AppComponent]
 })

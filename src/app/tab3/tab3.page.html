@@ -1,17 +1,33 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
+  <!-- header -->
+  <ion-toolbar color="main">
+    <ion-grid>
+      <ion-row class="ion-justify-content-center ion-align-items-end ion-text-center">
+        <ion-col size="3"></ion-col>
+        <ion-col size="6" class="ion-text-center">
+          <ion-img src="../../assets/white_text_logo.png" class="header-icon" alt="logo"></ion-img>
+        </ion-col>
+        <ion-col size="3" (click)="CreatePopover()">
+          <ion-chip class="ion-margin-start" color="light_gray">
+            <ion-avatar>
+              <img src="https://avatars0.githubusercontent.com/u/60207521?v=4" alt="avatar-icon">
+            </ion-avatar>
+            <ion-icon name="caret-down-outline"></ion-icon>
+          </ion-chip>
+       </ion-col>
+      </ion-row>
+    </ion-grid>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <!-- 遷移テスト -->
+  <ion-button color="green" routerLink="/profile">フレンドプロファイルページへ</ion-button>
+  <ion-button color="green" routerLink="/friends">フレンドのフレンドリストページへ</ion-button>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="main" routerLink="/register">
+      <ion-icon name="person-add-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>

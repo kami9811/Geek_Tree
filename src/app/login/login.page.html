@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar color="main">
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="login-page ion-text-center">
+  <!-- Logo -->
+  <ion-img src="../../assets/logo.png" alt="app-logo"></ion-img>
+  <!-- GitHub-ID, Application Password, Save Button -->
+  <form (submit)="insertNative()">
+    <ion-item class="login-input" lines="none">
+      <ion-label position="stacked">GitHub ID</ion-label>
+      <ion-input type="text" name="id" [(ngModel)]="id"></ion-input>
+    </ion-item>
+    <ion-item class="login-input ion-margin-top" lines="none">
+      <ion-label position="stacked">Application Password</ion-label>
+      <ion-input type="password" name="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+    <ion-button class="save-id ion-margin-vertical" type="submit" color="blue">Save</ion-button>
+  </form>
+  <!-- Sign in with GitHub-->
+  <form (click)="getOauth()">
+    <ion-button color="dark" class="github-btn ion-margin-vertical">
+      <ion-img src="https://github.githubassets.com/favicons/favicon-dark.png"></ion-img>
+      <span class="ion-text-capitalize">Sign in with GitHub</span>
+    </ion-button>
+  </form>
+</ion-content>
