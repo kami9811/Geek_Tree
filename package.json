@@ -21,10 +21,7 @@
     "@angular/router": "~10.0.0",
     "@capacitor/core": "2.4.2",
     "@capacitor/ios": "^2.4.2",
-<<<<<<< HEAD
-=======
     "@ionic-native/camera": "^5.28.0",
->>>>>>> 5da2bf7152ebf2efbb979a4f5da37dd1b919f060
     "@ionic-native/core": "^5.0.0",
     "@ionic-native/file": "^5.28.0",
     "@ionic-native/geolocation": "^5.28.0",
