@@ -22,8 +22,45 @@
 
 <ion-content [fullscreen]="true">
   <!-- 遷移テスト -->
-  <ion-button color="green" routerLink="/profile">フレンドプロファイルページへ</ion-button>
-  <ion-button color="green" routerLink="/friends">フレンドのフレンドリストページへ</ion-button>
+<!--   <ion-button color="green" routerLink="/profile">フレンドプロファイルページへ</ion-button>
+  <ion-button color="green" routerLink="/friends">フレンドのフレンドリストページへ</ion-button> -->
+  <ion-list>
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="./avatar-finn.png">
+      </ion-avatar>
+      <ion-label>
+        <h2>Wakudar</h2>
+        <h3>I'm a big deal</h3>
+        <p color="blue">Find friends</p>
+        <ion-button size="small" color="light_gray" routerLink="/settings">Edit profile</ion-button>
+        <br>
+        <ion-chip class="ion-margin-start">
+          <ion-avatar>
+            <img src="./avatar.svg">
+          </ion-avatar>
+          <ion-label>GitHub</ion-label>
+        </ion-chip>
+        <ion-chip class="ion-margin-start">
+          <ion-avatar>
+            <img src="./avatar.svg">
+          </ion-avatar>
+          <ion-label>Twitter</ion-label>
+        </ion-chip>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <!-- techに応じたレベル表示 -->
+  <ion-item color="dark_gray" >
+    <ion-label class="level_display">
+      <p>Python ... Lv10</p>
+      <p>JavaScript ... Lv20</p>
+    </ion-label>
+  </ion-item>
+
+  <!-- 木の表示 -->
+  <ion-img src="../../assets/tree.svg" alt="木の画像"></ion-img>
 
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button color="main" routerLink="/register">
