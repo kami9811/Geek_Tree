@@ -2,8 +2,6 @@
 <widget version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <access origin="*" />
   
-<<<<<<< HEAD
-=======
   <feature name="Camera">
     <param name="ios-package" value="CDVCamera"/>
   </feature>
@@ -17,7 +15,6 @@
     <param name="ios-package" value="CDVLocation"/>
   </feature>
 
->>>>>>> 5da2bf7152ebf2efbb979a4f5da37dd1b919f060
   <feature name="NativeStorage">
     <param name="ios-package" value="NativeStorage"/>
   </feature>
