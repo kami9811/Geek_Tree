@@ -7,11 +7,15 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <!-- カラーテスト -->
+  <div>
+    <ion-button color="main">main</ion-button>
+    <ion-button color="green">green</ion-button>
+    <ion-button color="blue">blue</ion-button>
+    <ion-button color="light_gray">light_gray</ion-button>
+    <ion-button color="dark_gray">dark_gray</ion-button>
+  </div>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <!-- 遷移テスト -->
+  <ion-button color="green" routerLink="/login">ログインページへ</ion-button>
 </ion-content>
