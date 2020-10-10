@@ -3,10 +3,24 @@
     <ion-buttons slot="start">
       <ion-back-button id="back"></ion-back-button>
     </ion-buttons>
-    <ion-title>login</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-img src="../../assets/icon.png" alt="app-logo"></ion-img>
+  <div id="app-title">Geek Tree</div>
+  <form>
+    <ion-label>Your GitHub ID</ion-label>
+    <ion-input type="text" name="id" placeholder="enter github id"></ion-input>
+    <ion-label>Application Password</ion-label>
+    <ion-input type="password" name="password" placeholder="enter github password"></ion-input>
+    <ion-button>Save</ion-button>
+  </form>
+  <form>
+    <ion-button color="light">
+      <ion-img src="https://github.githubassets.com/favicons/favicon-dark.png"></ion-img>
+      <span class="ion-text-capitalize">Sign in with GitHub</span>
+    </ion-button>
+  </form>
+  
 </ion-content>
