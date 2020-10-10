@@ -1,7 +1,8 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
+  <!-- header -->
+  <ion-toolbar color="main">
+    <ion-title class="header">
+      <ion-img src="../../assets/logo.png" alt="logo"></ion-img>
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -18,4 +19,15 @@
 
   <!-- 遷移テスト -->
   <ion-button color="green" routerLink="/login">ログインページへ</ion-button>
+
+  <!-- techに応じたレベル表示 -->
+  <ion-item color="dark_gray" >
+    <ion-label class="level_display">
+      <p>Python ... Lv10</p>
+      <p>JavaScript ... Lv20</p>
+    </ion-label>
+  </ion-item>
+
+  <!-- 木の表示 -->
+  <ion-img src="../../assets/tree.svg" alt="木の画像"></ion-img>
 </ion-content>
