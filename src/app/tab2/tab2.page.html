@@ -19,8 +19,56 @@
     </ion-grid>
   </ion-toolbar>
 </ion-header>
-
+​
+<!-- body -->
 <ion-content [fullscreen]="true">
   <!-- 遷移テスト -->
-  <ion-button color="green" routerLink="/settings">プロフィール編集ページへ</ion-button>
+  <!-- <ion-button color="green" routerLink="/settings">プロフィール編集ページへ</ion-button> -->
+  <ion-list>
+    <ion-list-header>
+      My Friends
+    </ion-list-header>
+​
+    <!-- フレンドのリスト -->
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="https://avatars1.githubusercontent.com/u/41634142?v=4">
+      </ion-avatar>
+      <ion-label>
+        <h2>Yuki Yamamoto</h2>
+        <h3>Ibaraki</h3>
+        <div class="languages">
+          <span>Rails</span>
+          <span>Python</span>
+        </div>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="https://avatars0.githubusercontent.com/u/52734027?v=4">
+      </ion-avatar>
+      <ion-label>
+        <h2>Shun Kimura</h2>
+        <h3>Chiba</h3>
+        <div class="languages">
+          <span>Python</span>
+          <span>Jupyter Notebook</span>
+        </div>
+      </ion-label>
+    </ion-item>
+        <ion-item>
+      <ion-avatar slot="start">
+        <img src="https://avatars2.githubusercontent.com/u/49345024?v=4">
+      </ion-avatar>
+      <ion-label>
+        <h2>Kami9811</h2>
+        <h3>Kumamoto</h3>
+        <div class="languages">
+          <span>PHP</span>
+          <span>Angular</span>
+        </div>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
 </ion-content>
