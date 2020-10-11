@@ -7,6 +7,11 @@
   border-radius: 5px;
   background-color: lightgray;
   opacity: 0.4;
+  .level_display {
+    p {
+      color: black;
+    }
+  }
 }
 ​
 .tree-box {
@@ -17,7 +22,7 @@
 }
 ​
 .tree-box img {
-  width: 70%;
+  width: 50%;
   height: 300px;
   margin-top: 100px;
 }
