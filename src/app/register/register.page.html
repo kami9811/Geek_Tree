@@ -1,12 +1,32 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="main">
     <ion-buttons slot="start">
       <ion-back-button id="back"></ion-back-button>
     </ion-buttons>
-    <ion-title>register</ion-title>
+    <ion-grid>
+      <ion-row class="ion-justify-content-center ion-align-items-end">
+        <ion-col size="3"></ion-col>
+        <ion-col size="6" class="ion-text-center">
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <div class="button-area">
+    <form class="ion-padding">
+      <ion-item lines="full" class="ion-padding-bottom">
+        <ion-label position="floating">GitHub IDを入力</ion-label>
+        <ion-input required type="text" [(ngModel)]="id" name="id"></ion-input>
+      </ion-item>
+      <ion-button class="ion-margin-vertical" type="submit" color="blue" expand="block" (click)="apply()">フレンド申請</ion-button>
+    </form>
+  </div>
+  <div class="center-title">
+    Follow Request...
+  </div>
+  <div *ngFor="let r of request_member" class="center-follow">
+    <span class="applicant_name">{{r}}</span><ion-button color="green" (click)="follow(r)">+ Follow!</ion-button>
+  </div>
 </ion-content>

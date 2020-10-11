@@ -26,3 +26,24 @@
   height: 300px;
   margin-top: 100px;
 }
+
+.languages {
+  margin-bottom: 5px;
+  span {
+    border-radius: 5px;
+    margin-right: 10px;
+    background-size: contain;
+    padding: 2px;
+    font-size: 0.8em;
+    color: white;
+    background: blue;
+  }
+  :first-child {
+    color: white;
+    background-color: green;
+  }
+  :last-of-type {
+    color: black;
+    background-color: yellow;
+  }
+}
