@@ -1,4 +1,4 @@
-<ion-header [translucent]="true">
+<ion-header>
   <!-- header -->
   <ion-toolbar color="main">
     <ion-grid>
@@ -20,27 +20,16 @@
   </ion-toolbar>
 </ion-header>
 
+<!-- body -->
 <ion-content [fullscreen]="true">
-  <!-- カラーテスト -->
-  <div>
-    <ion-button color="main">main</ion-button>
-    <ion-button color="green">green</ion-button>
-    <ion-button color="blue">blue</ion-button>
-    <ion-button color="light_gray">light_gray</ion-button>
-    <ion-button color="dark_gray">dark_gray</ion-button>
-  </div>
-
-  <!-- 遷移テスト -->
-  <ion-button color="green" routerLink="/login">ログインページへ</ion-button>
-
-  <!-- techに応じたレベル表示 -->
-  <ion-item color="dark_gray" >
-    <ion-label class="level_display">
-      <p>Python ... Lv10</p>
-      <p>JavaScript ... Lv20</p>
-    </ion-label>
-  </ion-item>
-
-  <!-- 木の表示 -->
-  <ion-img src="../../assets/tree.svg" alt="木の画像"></ion-img>
+  ​
+    <!-- 追加 -->
+    <div class="top-box">
+      <div class="content">
+      <!-- ここに内容追加して欲しい -->
+      </div>
+    </div>
+    <div class="tree-box">
+      <img src="../../assets/small_tree.svg">
+    </div>
 </ion-content>
