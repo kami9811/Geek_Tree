@@ -1,4 +1,4 @@
-<ion-header [translucent]="true">
+<ion-header>
   <!-- header -->
   <ion-toolbar color="main">
     <ion-grid>
@@ -22,9 +22,73 @@
 
 <ion-content [fullscreen]="true">
   <!-- 遷移テスト -->
-  <ion-button color="green" routerLink="/profile">フレンドプロファイルページへ</ion-button>
-  <ion-button color="green" routerLink="/friends">フレンドのフレンドリストページへ</ion-button>
+  <!-- <ion-button color="green" routerLink="/profile">フレンドプロファイルページへ</ion-button>
+  <ion-button color="green" routerLink="/friends">フレンドのフレンドリストページへ</ion-button> -->
+  <ion-list>
+    <div class="center">
+    <ion-item lines="full">
+      <ion-avatar slot="start">
+        <img src="https://avatars0.githubusercontent.com/u/60207521?v=4">
+      </ion-avatar>
+      <ion-label>
+        <h1 *ngIf="returnObj.nickname != null">{{returnObj.nickname}}</h1>
+        <h1 *ngIf="returnObj.nickname == null">Nickname not set</h1>
+        <!-- <p>{{returnObj.user_id}} </p> -->
+        <h3>{{returnObj.address}}</h3>
 
+        <a href="https://github.com/{{returnObj}}">
+        <ion-chip class="ion-margin-start" outline color="dark">
+          <ion-avatar>
+            <img src="../../assets/icon/GitHub.png">
+          </ion-avatar>
+          <ion-label>GitHub</ion-label>
+        </ion-chip>
+        </a>
+        <a href="https://twitter.com">
+        <ion-chip class="ion-margin-start" outline color="secondary">
+          <ion-avatar>
+            <img src="../../assets/icon/Twitter.svg">
+          </ion-avatar>
+          <ion-label>Twitter</ion-label>
+        </ion-chip>
+        </a>
+        <br>
+
+        <ion-button color="blue" routerLink="/friends" class="toLink"><ion-icon name="git-network-outline"></ion-icon> Find friends</ion-button>
+        <ion-button size="small" color="light_gray" routerLink="/settings"><ion-icon name="brush-outline"></ion-icon> Edit profile</ion-button>
+      </ion-label>
+    </ion-item>
+    </div>
+  </ion-list>
+  <!-- techに応じたレベル表示 -->
+  <ion-header><h3>&emsp;Techs</h3></ion-header>
+  <ion-item lines="full" color="dark_gray" >
+    <ion-label class="level_display">
+      <p>Python ... Lv10</p>
+      <p>JavaScript ... Lv20</p>
+    </ion-label>
+  </ion-item>
+​
+  <!-- 木の表示 -->
+  <ion-img src="../../assets/small_tree.svg" alt="木の画像"></ion-img>
+​
+  <!-- 非表示 -->
+  <!--
+  <div>
+    <div class="row header">
+      <div class="col">Language name</div>
+      <div class="col">Level(%)</div>
+    </div>
+    <div class="row">
+      <p>{{returnObj.languages}}</p>
+      <ion-item >
+      <div class="col">name</div>
+      <div class="col">percentage</div>
+      </ion-item>
+    </div>
+  </div>
+  -->
+​
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button color="main" routerLink="/register">
       <ion-icon name="person-add-outline"></ion-icon>

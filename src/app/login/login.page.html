@@ -16,11 +16,11 @@
       <ion-label position="stacked">Application Password</ion-label>
       <ion-input type="password" name="password" [(ngModel)]="password"></ion-input>
     </ion-item>
-    <ion-button class="save-id ion-margin-vertical" type="submit" color="blue">Save</ion-button>
+    <ion-button class="save-id ion-margin-vertical" type="submit" color="blue" expand="block">Save</ion-button>
   </form>
   <!-- Sign in with GitHub-->
   <form (click)="getOauth()">
-    <ion-button color="dark" class="github-btn ion-margin-vertical">
+    <ion-button color="dark" class="github-btn ion-margin-vertical" expand="block">
       <ion-img src="https://github.githubassets.com/favicons/favicon-dark.png"></ion-img>
       <span class="ion-text-capitalize">Sign in with GitHub</span>
     </ion-button>

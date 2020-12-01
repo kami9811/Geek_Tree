@@ -4,7 +4,7 @@ import { GlobalService } from '../global.service';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
-
+​
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -13,18 +13,18 @@ import { AlertController } from '@ionic/angular';
 export class LoginPage implements OnInit {
   id: string;
   password: string;
-
+​
   postObj: any = {};
   returnObj: any = {};
-
+​
   gitFlag: Boolean = false;
-
+​
   interval: any;
-
+​
   loginFlag: Boolean = false;
-
+​
   status: number = 0;
-
+​
   constructor(
     private nativeStorage: NativeStorage,
     public gs: GlobalService,
@@ -32,7 +32,7 @@ export class LoginPage implements OnInit {
     private router: Router,
     private alertController: AlertController,
   ) { }
-
+​
   ngOnInit() {
   }
   ngOnDestroy() {
@@ -41,7 +41,7 @@ export class LoginPage implements OnInit {
       this.router.navigate(['/login']);
     }
   }
-
+​
   insertNative = () => {
     this.nativeStorage.setItem('login', {
       user_id: this.id,
@@ -73,7 +73,7 @@ export class LoginPage implements OnInit {
       }
     )
   }
-
+​
   getOauth = () => {
     if(this.gitFlag == false){
       console.log(this.gitFlag);
@@ -85,13 +85,13 @@ export class LoginPage implements OnInit {
       this.intervalFuntion();
     }
   }
-
+​
   intervalFuntion = () => {
     this.interval = setInterval(() => {
       this.login();
     }, 2000);
   }
-
+​
   login = () => {
     this.postObj['user_id'] = this.id;
     this.postObj['password'] = this.password;
@@ -119,7 +119,16 @@ export class LoginPage implements OnInit {
                     password: this.password,
                     login: true,
                   });
-                  this.router.navigate(['']);
+                  this.gs.http('http://liquidmetal.ml/_api/user/new', body).subscribe(
+                    res => {
+                      console.log(res);
+                      this.router.navigate(['']);
+                    },
+                    error => {
+                      console.error(error);
+                      this.router.navigate(['']);
+                    }
+                  )
                 }
               }
             )
@@ -128,13 +137,13 @@ export class LoginPage implements OnInit {
       );
     }
   }
-
+​
   async alertLogin() {
     const alert = await this.alertController.create({
       message: 'ログインに成功しました.',
       buttons: ['OK']
     })
-
+​
     await alert.present();
   }
   async alertBadRequest() {
@@ -142,7 +151,7 @@ export class LoginPage implements OnInit {
       message: 'GitHub IDとApplication Passwordが設定されていません.',
       buttons: ['OK']
     })
-
+​
     await alert.present();
   }
   async alertRegister() {
@@ -150,8 +159,8 @@ export class LoginPage implements OnInit {
       message: 'GitHub IDとApplication Passwordが設定ました.',
       buttons: ['OK']
     })
-
+​
     await alert.present();
   }
-
+​
 }
